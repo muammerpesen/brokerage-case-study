@@ -11,4 +11,4 @@ insert into customer values(1 'admin', '$2a$10$onMjCUTvNZvsggjq0NRcxu06BhNSAR9X9
 insert into customer values(2 'cust', '$2a$10$onMjCUTvNZvsggjq0NRcxu06BhNSAR9X9ii7VZ4k/0OuJnA9zFzG2', 'CUSTOMER', 0);
 
 # REQUEST EXAMPLES
-Postman collection file was added as "/brokerage-case-study.postman_collection.json"
+Postman collection file was added to "/docs/brokerage-case-study.postman_collection.json"
