@@ -31,7 +31,6 @@ public class AssetServiceTest {
 
     @Test
     void listService_test() {
-        // given
         ListAssetRequest req = new ListAssetRequest();
         req.setCustomerId(101);
 
