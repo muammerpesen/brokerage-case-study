@@ -261,7 +261,7 @@ public class OrderServiceTests {
 
         DeleteOrderResponse resp = orderService.deleteOrder(req, null);
 
-        // Order CANCELED
+        
         verify(orderService).saveOrder(argThat(o ->
                 o.getStatus() == OrderStatusEnum.CANCELED.getId()
         ));
@@ -416,13 +416,11 @@ public class OrderServiceTests {
         when(assetService.getAsset(303, CurrencyEnum.TRY.getId())).thenReturn(tryAsset);
 
         MatchOrderResponse resp = orderService.matchOrder(req, null);
-
-        // MATCHED kaydı
         verify(orderRepository).save(argThat(o ->
                 o.getId() == 12 && o.getStatus() == OrderStatusEnum.MATCHED.getId()
         ));
 
-        // TRY usable artışı doğrula
+        
         verify(assetService).saveAsset(argThat((Asset a) ->
                 "TRY".equals(a.getAssetName())
                         && a.getCustomerId() == 303
