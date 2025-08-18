@@ -12,3 +12,10 @@ insert into customer values(2 'cust', '$2a$10$onMjCUTvNZvsggjq0NRcxu06BhNSAR9X9i
 
 # REQUEST EXAMPLES
 Postman collection file was added to "/docs/brokerage-case-study.postman_collection.json"
+
+# TABLES
+There are 3 tables. asset, orders and customer.
+
+  -Asset table includes asset's informations(assetname, size, usablesize)
+  -Orders table includes order's details.(customerid, orderside(BUY=1 or SELL=2), size, price, status(PENDING=1, MATCHED=2, CANCELED=3)
+  -Customer table includes customer's details.(id, username, password, role(ADMIN, CUSTOMER))
